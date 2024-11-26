@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+	<title>Vue.js 3 & Router4</title>
+	<!-- Framework de Bootstrap -->	
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Framework Vue v3.5.12 -->
+	<script src="js/vue3.js"></script>
+	<!-- Framework Vue Router v4.4.5 -->
+	<script src="js/vuerouter4.js"></script>
+	<!-- Librería de íconos Font AwSome v4.7 -->
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+</head>
+<body>
+
+<div id="app" class="container mt-5" >
+
+	<h1 class="text-primary text-center">Vue3 con VueRouter4 y Bootstrap</h1>
+
+	<nav class="navbar navbar-expand navbar-light bg-primary" >
+	  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+	    <ul class="navbar-nav m-1">
+			<li> <router-link class="nav-link text-light" to="/">
+				<i class="fa fa-home" aria-hidden="true"></i>
+				Inicio</router-link> 
+			</li>
+			<li> <router-link class="nav-link text-light" to="/login">
+				<i class="fa fa-key" aria-hidden="true"></i>
+				Login
+				</router-link>
+			</li>
+			<li> <router-link class="nav-link text-light" to="/informacion">
+				<i class="fa fa-info" aria-hidden="true"></i>
+				Informaci&oacute;n
+				</router-link>
+			</li>	
+			<li> <router-link class="nav-link text-light" to="/rym">
+				<i class="fa fa-reddit-alien" aria-hidden="true"></i>
+				Rick & Morty
+				</router-link>
+			</li>	
+			
+	    </ul>
+	  </div>
+	</nav>
+	<div class="text-center mt-3" >
+		<router-view></router-view>
+	</div>
+</div>
+<!-- vue componentes -->
+<script src="paginas/home.vue.js"></script>
+<script src="paginas/login.vue.js"></script>
+<script src="paginas/informacion.vue.js"></script>
+<script src="paginas/rym.vue.js"></script>
+<!-- vue inicialización -->
+<script src="js/rutas.js"></script>
+
+</body>

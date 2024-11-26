@@ -1,0 +1,66 @@
+ prueba.html
+ <h1>Personajes de Rick & Morty</h1>
+        <div class="card" style="width: 640px;">            
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <img class="card-img-top" 
+                    src="http://192.168.1.2/rym/images/1.jpeg">                        
+                    </div>
+                    <div class="col">
+                    </div>
+                </div>
+            </div>
+          </div>
+
+index.html
+<li> <router-link class="nav-link text-light" to="/rym">
+				<i class="fa fa-slideshare" aria-hidden="true"></i>
+				Rick & Morty
+				</router-link>
+</li>		
+
+
+/*        var app = new Vue({
+            el: "#app",
+            data: {
+                datos: [],
+                url: "http://192.168.1.2/rym",
+            }, //fin data
+            mounted: function () {
+                this.pedirDatos(this.url);
+            },
+            methods: {
+                //funciones de la aplicación
+                pedirDatos: function (url) {
+                    fetch(url)
+                        .then((respuesta) => respuesta.json())
+                        .then((respuesta) => {
+                            console.log(respuesta);
+                            this.datos = respuesta;
+                        });
+                }, //fin pedirPokes
+            }
+        })    */
+
+
+
+rym
+data:function(){
+		return{
+			datos:[]
+		}
+	},
+	mounted() {
+			  this.pedirDatos()
+	},
+	methods:{
+		pedirDatos:function(){
+			fetch('http://192.168.1.2/rym/personajes')
+			.then(data=>data.json())
+			.then(data=>{
+				datos=data.results;
+				console.log(datos);
+			})
+		}
+	},
