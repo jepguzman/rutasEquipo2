@@ -12,15 +12,12 @@
                 </div>
             </div>
           </div>
-
 index.html
 <li> <router-link class="nav-link text-light" to="/rym">
 				<i class="fa fa-slideshare" aria-hidden="true"></i>
 				Rick & Morty
 				</router-link>
 </li>		
-
-
 /*        var app = new Vue({
             el: "#app",
             data: {
@@ -42,9 +39,6 @@ index.html
                 }, //fin pedirPokes
             }
         })    */
-
-
-
 rym
 data:function(){
 		return{
